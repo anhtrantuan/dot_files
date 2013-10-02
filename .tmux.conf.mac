@@ -1,0 +1,38 @@
+# Enable pbpaste, pbcopy and launchctl
+## Make sure you have 'reattach-to-user-namespace'
+set -g default-command "reattach-to-user-namespace -l bash"
+
+# Key map
+## Pane resizing
+bind -r H resize-pane -L
+bind -r J resize-pane -D
+bind -r K resize-pane -U
+bind -r L resize-pane -R
+## Window navigation
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+## Pane navigation
+bind -r h select-pane -L
+bind -r j select-pane -D
+bind -r k select-pane -U
+bind -r l select-pane -R
+## Splitting panes
+bind -r | split-window -h
+bind -r - split-window -v
+
+# Default delay
+set -sg escape-time 1
+
+# Base indexes
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Enable mouse mode
+## Need to install SIMBL and MouseTerm
+setw -g mode-mouse on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
+
+# VIm mode
+setw -g mode-keys vi
