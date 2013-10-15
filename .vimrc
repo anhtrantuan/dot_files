@@ -145,3 +145,5 @@ map <C-e> :call ToggleSyntasticErrors()<CR>
 
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
+
+set nrformats=
