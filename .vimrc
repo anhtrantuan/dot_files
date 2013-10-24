@@ -147,3 +147,5 @@ highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
 
 set nrformats=
+
+runtime macros/matchit.vim
