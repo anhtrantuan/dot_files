@@ -149,3 +149,5 @@ highlight NonText ctermbg=NONE
 set nrformats=
 
 runtime macros/matchit.vim
+
+set smartcase
