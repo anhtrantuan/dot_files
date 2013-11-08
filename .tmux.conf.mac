@@ -21,6 +21,8 @@ bind -r | split-window -h
 bind -r - split-window -v
 ## Copy and paste
 bind C-c run "tmux show-buffer | reattach-to-user-namespace pbcopy"
+## Layouts
+bind R source-file ~/.tmux/ruby
 
 # Default delay
 set -sg escape-time 1
