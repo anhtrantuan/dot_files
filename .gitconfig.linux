@@ -1,0 +1,9 @@
+[color]
+	ui = true
+[core]
+	excludesfile = /home/anhtran/.gitignore_global
+[user]
+	name = anhtrantuan
+	email = anhtrantuan.hcmc@gmail.com
+[push]
+	default = simple
