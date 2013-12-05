@@ -26,6 +26,7 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
+
 set history=200		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -132,9 +133,18 @@ function! ToggleSyntasticErrors()
 	endif
 endfunction
 
+function! ToggleRelativeNumber()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+
 autocmd BufWritePost * call CheckSyntasticErrors()
 autocmd BufWinLeave * lclose
 
+map <F5> :GundoToggle<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :SCCompile<CR>
 map <F10> :SCCompileRun<CR>
@@ -143,19 +153,16 @@ map r<DOWN> :<C-U>exec "resize -".v:count1<CR>
 map r<UP> :<C-U>exec "resize +".v:count1<CR>
 map r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
 map <C-e> :call ToggleSyntasticErrors()<CR>
+map <C-n> :call ToggleRelativeNumber()<CR>
 
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
 
-set nrformats=
-
 runtime macros/matchit.vim
 
+set nrformats=
 set smartcase
-
-" Folding settings
 set foldcolumn=1
 set foldmethod=syntax
 set nofoldenable
 
-nnoremap <F5> :GundoToggle<CR>
