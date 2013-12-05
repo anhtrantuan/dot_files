@@ -152,3 +152,8 @@ set nrformats=
 runtime macros/matchit.vim
 
 set smartcase
+
+" Folding settings
+set foldcolumn=1
+set foldmethod=syntax
+set nofoldenable
