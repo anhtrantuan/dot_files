@@ -157,3 +157,5 @@ set smartcase
 set foldcolumn=1
 set foldmethod=syntax
 set nofoldenable
+
+nnoremap <F5> :GundoToggle<CR>
