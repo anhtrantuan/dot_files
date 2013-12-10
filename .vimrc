@@ -154,6 +154,8 @@ map r<UP> :<C-U>exec "resize +".v:count1<CR>
 map r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
 map <C-e> :call ToggleSyntasticErrors()<CR>
 map <C-n> :call ToggleRelativeNumber()<CR>
+map th :tabmove -1<CR>
+map tl :tabmove +1<CR>
 
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
