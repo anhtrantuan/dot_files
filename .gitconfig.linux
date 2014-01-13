@@ -2,6 +2,7 @@
 	ui = true
 [core]
 	excludesfile = /home/anhtran/.gitignore_global
+  editor = vim
 [user]
 	name = anhtrantuan
 	email = anhtrantuan.hcmc@gmail.com
