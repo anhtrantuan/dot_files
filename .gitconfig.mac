@@ -8,3 +8,6 @@
 	email = anhtrantuan.hcmc@gmail.com
 [push]
 	default = simple
+[alias]
+	ps = push -f staging HEAD:master
+	pp = push -f production HEAD:master

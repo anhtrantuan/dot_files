@@ -6,3 +6,6 @@
 [user]
 	name = anhtrantuan
 	email = anhtrantuan.hcmc@gmail.com
+[alias]
+	ps = push -f staging HEAD:master
+	pp = push -f production HEAD:master
