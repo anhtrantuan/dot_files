@@ -103,11 +103,39 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-execute pathogen#infect()
-execute pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'xuhdev/SingleCompile'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'sjl/gundo.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'tpope/vim-bundler'
+Bundle 'vim-scripts/TailMinusF'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'tpope/vim-haml'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-surround'
+Bundle 'kana/vim-textobj-entire'
+Bundle 'kana/vim-textobj-lastpat'
+Bundle 'kana/vim-textobj-user'
+Bundle 'avakhov/vim-yaml'
 
 colorscheme fu
-
+ 
 let g:NERDTreeShowLineNumbers = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:Powerline_symbols = 'fancy'
@@ -167,4 +195,3 @@ set smartcase
 set foldcolumn=1
 set foldmethod=syntax
 set nofoldenable
-
