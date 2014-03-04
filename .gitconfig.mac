@@ -9,8 +9,9 @@
 [push]
 	default = simple
 [alias]
+	aa = add -A
+	ap = add -p
+  co = checkout
   p = push
 	pp = push -f production HEAD:master
 	ps = push -f staging HEAD:master
-	aa = add -A
-	ap = add -p
