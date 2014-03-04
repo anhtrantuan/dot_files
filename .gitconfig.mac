@@ -9,7 +9,8 @@
 [push]
 	default = simple
 [alias]
-	ps = push -f staging HEAD:master
+  p = push
 	pp = push -f production HEAD:master
+	ps = push -f staging HEAD:master
 	aa = add -A
 	ap = add -p
