@@ -11,3 +11,4 @@
 [alias]
 	ps = push -f staging HEAD:master
 	pp = push -f production HEAD:master
+	ap = add -p
