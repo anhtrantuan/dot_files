@@ -13,3 +13,5 @@
   p = push
 	pp = push -f production HEAD:master
 	ps = push -f staging HEAD:master
+[push]
+	default = simple
