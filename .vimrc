@@ -133,6 +133,7 @@ Bundle 'kana/vim-textobj-entire'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-user'
 Bundle 'avakhov/vim-yaml'
+Bundle 'ngmy/vim-rubocop'
 
 colorscheme fu
  
