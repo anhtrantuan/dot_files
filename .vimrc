@@ -122,25 +122,26 @@ Bundle 'SirVer/ultisnips'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-scripts/TailMinusF'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'ngmy/vim-rubocop'
 Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-entire'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-user'
 Bundle 'avakhov/vim-yaml'
-Bundle 'ngmy/vim-rubocop'
 
 colorscheme fu
  
 let g:NERDTreeShowLineNumbers = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:Powerline_symbols = 'fancy'
-let g:ycm_extra_conf_globlist = ['!~/*']
+let g:ycm_extra_conf_globlist = ['$HOME/.ycm_extra_conf.py']
 let g:ycm_key_list_select_completion = ["<C-SPACE>", "<DOWN>"]
 let g:ycm_key_list_previous_completion = ["<C-S-SPACE>", "<UP>"]
 let g:SuperTabDefaultCompletionType = "<C-SPACE>"
