@@ -15,3 +15,5 @@
 	ps = push -f staging HEAD:master
 [push]
 	default = simple
+[web]
+	browser = google-chrome
