@@ -17,8 +17,8 @@ bind -r j select-pane -D
 bind -r k select-pane -U
 bind -r l select-pane -R
 ## Splitting panes
-bind -r | split-window -h
-bind -r - split-window -v
+bind -r | split-window -h -c "#{pane_current_path}"
+bind -r - split-window -v -c "#{pane_current_path}"
 ## Copy and paste
 bind C-c run "tmux show-buffer | reattach-to-user-namespace pbcopy"
 ## Layouts
