@@ -4,7 +4,9 @@
 * Make symbolic (soft) link to .tmux.conf:
   * For Mac: `ln -s ~/dot_files/.tmux.conf.mac ~/.tmux.conf`
   * For Linux: `ln -s ~/dot_files/.tmux.conf.linux ~/.tmux.conf`
-* Make symbolic (soft) link to .tmux folder: `ln -s ~/dot_files/.tmux ~/.tmux`
+* Make symbolic (soft) link to .tmux folder:
+  * For Mac: `ln -s ~/dot_files/.tmux.mac ~/.tmux`
+  * For Linux: `ln -s ~/dot_files/.tmux.linux ~/.tmux`
 * Make symbolic (soft) link to .gitconfig:
   * For Mac: `ln -s ~/dot_files/.gitconfig.mac ~/.gitconfig`
   * For Linux: `ln -s ~/dot_files/.gitconfig.linux ~/.gitconfig`
