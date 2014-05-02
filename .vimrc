@@ -89,6 +89,7 @@ if has("autocmd")
 
   augroup END
 
+  autocmd VimEnter * exec "!ctags -R ."
 else
 
   set autoindent		" always set autoindenting on
