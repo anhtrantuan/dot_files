@@ -88,8 +88,6 @@ if has("autocmd")
     \ endif
 
   augroup END
-
-  autocmd VimEnter * exec "!ctags -R ."
 else
 
   set autoindent		" always set autoindenting on
@@ -142,7 +140,6 @@ colorscheme fu
 let g:NERDTreeShowLineNumbers = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:Powerline_symbols = 'fancy'
-" let g:ycm_extra_conf_globlist = ['$HOME/.ycm_extra_conf.py']
 let g:ycm_key_list_select_completion = ["<C-SPACE>", "<DOWN>"]
 let g:ycm_key_list_previous_completion = ["<C-S-SPACE>", "<UP>"]
 let g:SuperTabDefaultCompletionType = "<C-SPACE>"
@@ -179,6 +176,7 @@ map <F5> :GundoToggle<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :SCCompile<CR>
 map <F10> :SCCompileRun<CR>
+map <F11> :exec "!ctags -R ."<CR>
 map r<LEFT> :<C-U>exec "vertical resize -".v:count1<CR>
 map r<DOWN> :<C-U>exec "resize -".v:count1<CR>
 map r<UP> :<C-U>exec "resize +".v:count1<CR>
