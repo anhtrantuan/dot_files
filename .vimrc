@@ -196,3 +196,5 @@ set smartcase
 set foldcolumn=1
 set foldmethod=syntax
 set nofoldenable
+
+set rtp+=$GOROOT/misc/vim
