@@ -50,7 +50,7 @@ map Q gq
 inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
+if has("mouse")
   set mouse=a
 endif
 
@@ -105,47 +105,46 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Bundle "gmarik/vundle"
 
-Bundle 'xuhdev/SingleCompile'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'sjl/gundo.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'tpope/vim-bundler'
-Bundle 'vim-scripts/TailMinusF'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'ngmy/vim-rubocop'
-Bundle 'tpope/vim-surround'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'kana/vim-textobj-user'
-Bundle 'avakhov/vim-yaml'
+Bundle "mileszs/ack.vim"
+Bundle "kien/ctrlp.vim"
+Bundle "Raimondi/delimitMate"
+Bundle "sjl/gundo.vim"
+Bundle "scrooloose/nerdtree"
+Bundle "xuhdev/SingleCompile"
+Bundle "ervandew/supertab"
+Bundle "scrooloose/syntastic"
+Bundle "majutsushi/tagbar"
+Bundle "tomtom/tcomment_vim"
+Bundle "SirVer/ultisnips"
+Bundle "tpope/vim-bundler"
+Bundle "vim-scripts/TailMinusF"
+Bundle "flazz/vim-colorschemes"
+Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-haml"
+Bundle "plasticboy/vim-markdown"
+Bundle "jistr/vim-nerdtree-tabs"
+Bundle "Lokaltog/vim-powerline"
+Bundle "tpope/vim-rails"
+Bundle "tpope/vim-rake"
+Bundle "ngmy/vim-rubocop"
+Bundle "honza/vim-snippets"
+Bundle "tpope/vim-surround"
+Bundle "kana/vim-textobj-entire"
+Bundle "kana/vim-textobj-lastpat"
+Bundle "kana/vim-textobj-user"
+Bundle "avakhov/vim-yaml"
+Bundle "Valloric/YouCompleteMe"
 
 colorscheme fu
- 
+
 let g:NERDTreeShowLineNumbers = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
-let g:Powerline_symbols = 'fancy'
-let g:ycm_key_list_select_completion = ["<C-SPACE>", "<DOWN>"]
-let g:ycm_key_list_previous_completion = ["<C-S-SPACE>", "<UP>"]
-let g:SuperTabDefaultCompletionType = "<C-SPACE>"
-let g:UltiSnipsExpandTrigger = "<TAB>"
-let g:UltiSnipsJumpForwardTrigger = "<TAB>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
+let g:Powerline_symbols = "fancy"
+let g:ycm_key_list_select_completion = ["<C-TAB>", "<DOWN>"]
+let g:ycm_key_list_previous_completion = ["<C-S-TAB>", "<UP>"]
+let g:SuperTabDefaultCompletionType = "<C-TAB>"
 
 function! CheckSyntasticErrors()
 	SyntasticCheck
@@ -154,7 +153,7 @@ function! CheckSyntasticErrors()
 endfunction
 
 function! ToggleSyntasticErrors()
-	if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
+	if empty(filter(tabpagebuflist(), "getbufvar(v:val, '&buftype') is# 'quickfix'"))
 		Errors
 	else
 		lclose
@@ -176,7 +175,7 @@ map <F5> :GundoToggle<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :SCCompile<CR>
 map <F10> :SCCompileRun<CR>
-map <F11> :exec "!ctags -R ."<CR>
+map gct :exec "!ctags -R ."<CR>
 map r<LEFT> :<C-U>exec "vertical resize -".v:count1<CR>
 map r<DOWN> :<C-U>exec "resize -".v:count1<CR>
 map r<UP> :<C-U>exec "resize +".v:count1<CR>
