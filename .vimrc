@@ -128,6 +128,7 @@ Bundle "jistr/vim-nerdtree-tabs"
 Bundle "Lokaltog/vim-powerline"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
+Bundle "thoughtbot/vim-rspec"
 Bundle "ngmy/vim-rubocop"
 Bundle "honza/vim-snippets"
 Bundle "tpope/vim-surround"
@@ -184,6 +185,10 @@ map <C-e> :call ToggleSyntasticErrors()<CR>
 map <C-n> :call ToggleRelativeNumber()<CR>
 map th :tabmove -1<CR>
 map tl :tabmove +1<CR>
+map Tt :call RunCurrentSpecFile()<CR>
+map Ts :call RunNearestSpec()<CR>
+map Tl :call RunLastSpec()<CR>
+map Ta :call RunAllSpecs()<CR>
 
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
