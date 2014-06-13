@@ -105,47 +105,48 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle "gmarik/vundle"
+Bundle 'gmarik/vundle'
 
-Bundle "mileszs/ack.vim"
-Bundle "kien/ctrlp.vim"
-Bundle "Raimondi/delimitMate"
-Bundle "sjl/gundo.vim"
-Bundle "scrooloose/nerdtree"
-Bundle "xuhdev/SingleCompile"
-Bundle "ervandew/supertab"
-Bundle "scrooloose/syntastic"
-Bundle "majutsushi/tagbar"
-Bundle "tomtom/tcomment_vim"
-Bundle "SirVer/ultisnips"
-Bundle "tpope/vim-bundler"
-Bundle "vim-scripts/TailMinusF"
-Bundle "flazz/vim-colorschemes"
-Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-haml"
-Bundle "plasticboy/vim-markdown"
-Bundle "jistr/vim-nerdtree-tabs"
-Bundle "Lokaltog/vim-powerline"
-Bundle "tpope/vim-rails"
-Bundle "tpope/vim-rake"
-Bundle "thoughtbot/vim-rspec"
-Bundle "ngmy/vim-rubocop"
-Bundle "honza/vim-snippets"
-Bundle "tpope/vim-surround"
-Bundle "kana/vim-textobj-entire"
-Bundle "kana/vim-textobj-lastpat"
-Bundle "kana/vim-textobj-user"
-Bundle "avakhov/vim-yaml"
-Bundle "Valloric/YouCompleteMe"
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'sjl/gundo.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'xuhdev/SingleCompile'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'tpope/vim-bundler'
+Bundle 'vim-scripts/TailMinusF'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'ngmy/vim-rubocop'
+Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-surround'
+Bundle 'kana/vim-textobj-entire'
+Bundle 'kana/vim-textobj-lastpat'
+Bundle 'kana/vim-textobj-user'
+Bundle 'avakhov/vim-yaml'
+Bundle 'Valloric/YouCompleteMe'
 
 colorscheme fu
 
 let g:NERDTreeShowLineNumbers = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
-let g:Powerline_symbols = "fancy"
-let g:ycm_key_list_select_completion = ["<C-TAB>", "<DOWN>"]
-let g:ycm_key_list_previous_completion = ["<C-S-TAB>", "<UP>"]
-let g:SuperTabDefaultCompletionType = "<C-TAB>"
+let g:Powerline_symbols = 'fancy'
+let g:ycm_key_list_select_completion = ['<C-TAB>', '<DOWN>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<UP>']
+let g:SuperTabDefaultCompletionType = '<C-TAB>'
 
 function! CheckSyntasticErrors()
 	SyntasticCheck
@@ -172,23 +173,33 @@ endfunction
 autocmd BufWritePost * call CheckSyntasticErrors()
 autocmd BufWinLeave * lclose
 
-map <F5> :GundoToggle<CR>
-map <F8> :TagbarToggle<CR>
-map <F9> :SCCompile<CR>
-map <F10> :SCCompileRun<CR>
-map gct :exec "!ctags -R ."<CR>
-map r<LEFT> :<C-U>exec "vertical resize -".v:count1<CR>
-map r<DOWN> :<C-U>exec "resize -".v:count1<CR>
-map r<UP> :<C-U>exec "resize +".v:count1<CR>
-map r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
-map <C-e> :call ToggleSyntasticErrors()<CR>
-map <C-n> :call ToggleRelativeNumber()<CR>
-map th :tabmove -1<CR>
-map tl :tabmove +1<CR>
-map Tt :call RunCurrentSpecFile()<CR>
-map Ts :call RunNearestSpec()<CR>
-map Tl :call RunLastSpec()<CR>
-map Ta :call RunAllSpecs()<CR>
+nmap <F5> :GundoToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+
+nmap <F9> :SCCompile<CR>
+nmap <F10> :SCCompileRun<CR>
+
+nmap gct :exec "!ctags -R ."<CR>
+
+nmap r<LEFT> :<C-U>exec "vertical resize -".v:count1<CR>
+nmap r<DOWN> :<C-U>exec "resize -".v:count1<CR>
+nmap r<UP> :<C-U>exec "resize +".v:count1<CR>
+nmap r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
+
+nmap <C-e> :call ToggleSyntasticErrors()<CR>
+
+nmap <C-n> :call ToggleRelativeNumber()<CR>
+
+nmap th :tabmove -1<CR>
+nmap tl :tabmove +1<CR>
+
+nmap Tt :call RunCurrentSpecFile()<CR>
+nmap Ts :call RunNearestSpec()<CR>
+nmap Tl :call RunLastSpec()<CR>
+nmap Ta :call RunAllSpecs()<CR>
+
+vmap <Enter> <Plug>(EasyAlign)
+nmap =a <Plug>(EasyAlign)
 
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
