@@ -142,7 +142,6 @@ Bundle 'Valloric/YouCompleteMe'
 colorscheme fu
 
 let g:NERDTreeShowLineNumbers = 1
-let g:nerdtree_tabs_open_on_console_startup = 1
 let g:Powerline_symbols = 'fancy'
 let g:ycm_key_list_select_completion = ['<C-TAB>', '<DOWN>']
 let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<UP>']
