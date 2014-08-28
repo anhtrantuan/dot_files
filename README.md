@@ -13,4 +13,3 @@
 * Make symbolic link to .gitignore_global: `ln -s ~/dot_files/.gitignore_global ~/.gitignore_global`
 * Create ftdetect directory: `mkdir -p ~/.vim/ftdetect`
 * Make symbolic link to .vim/ftdetect directory: `ln -s ~/dot_files/.vim/ftdetect/* ~/.vim/ftdetect/`
-* After bundling Vim plugins with Vundle, make symbolic link to UltiSnips ftdetect directory: `ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/`
