@@ -198,6 +198,8 @@ nmap Ta :call RunAllSpecs()<CR>
 vmap <Enter> <Plug>(EasyAlign)
 nmap =a <Plug>(EasyAlign)
 
+highlight Normal ctermbg=NONE
+
 runtime macros/matchit.vim
 
 set nrformats=
