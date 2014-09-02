@@ -134,10 +134,16 @@ Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-user'
 Bundle 'avakhov/vim-yaml'
 
-colorscheme fu
+colorscheme kolor
 
 let g:NERDTreeShowLineNumbers = 1
+
 let g:Powerline_symbols = 'fancy'
+
+let g:kolor_italic = 1
+let g:kolor_bold = 1
+let g:kolor_underlined = 0
+let g:kolor_alternative_matchparen = 0
 
 function! CheckSyntasticErrors()
 	SyntasticCheck
@@ -191,9 +197,6 @@ nmap Ta :call RunAllSpecs()<CR>
 
 vmap <Enter> <Plug>(EasyAlign)
 nmap =a <Plug>(EasyAlign)
-
-highlight Normal ctermbg=NONE
-highlight NonText ctermbg=NONE
 
 runtime macros/matchit.vim
 
