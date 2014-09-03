@@ -204,9 +204,13 @@ highlight NonText ctermbg=NONE
 runtime macros/matchit.vim
 
 set nrformats=
+
 set smartcase
+
 set foldcolumn=1
 set foldmethod=syntax
 set nofoldenable
+
+set laststatus=2
 
 set rtp+=$GOROOT/misc/vim
