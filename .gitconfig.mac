@@ -1,17 +1,22 @@
 [color]
-	ui = true
+  ui = true
 [core]
-	excludesfile = /Users/anhtran/.gitignore_global
-  editor = vim
+  excludesfile = /Users/anhtran/.gitignore_global
+  editor       = vim
 [user]
-	name = anhtrantuan
-	email = anhtrantuan.hcmc@gmail.com
+  name  = anhtrantuan
+  email = anhtrantuan.hcmc@gmail.com
 [push]
-	default = simple
+  default = simple
 [alias]
-	aa = add -A
-	ap = add -p
+  aa = add -A
+  ap = add -p
   co = checkout
-  p = push
-	pp = push -f production HEAD:master
-	ps = push -f staging HEAD:master
+  cm = commit
+  cs = commit -s
+  p  = push
+  pf = push -f
+  pp = push -f production HEAD:master
+  ps = push -f staging HEAD:master
+  pu = pull
+  st = status
