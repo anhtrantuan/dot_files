@@ -207,6 +207,8 @@ set nrformats=
 
 set smartcase
 
+set relativenumber
+
 set foldcolumn=1
 set foldmethod=syntax
 set nofoldenable
