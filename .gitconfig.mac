@@ -13,6 +13,7 @@
   ap = add -p
   co = checkout
   cm = commit
+  cp = cherry-pick
   cs = commit -s
   p  = push
   pf = push -f
