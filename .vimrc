@@ -27,7 +27,7 @@ else
   set backup		" keep a backup file
 endif
 
-set history=200		" keep 50 lines of command line history
+set history=500		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
@@ -107,27 +107,16 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'sjl/gundo.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'xuhdev/SingleCompile'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-bundler'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'ngmy/vim-rubocop'
 Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-entire'
 Bundle 'kana/vim-textobj-lastpat'
@@ -145,47 +134,12 @@ let g:kolor_bold=1
 let g:kolor_underlined=0
 let g:kolor_alternative_matchparen=0
 
-function! CheckSyntasticErrors()
-	SyntasticCheck
-
-	Errors
-endfunction
-
-function! ToggleSyntasticErrors()
-	if empty(filter(tabpagebuflist(), "getbufvar(v:val, '&buftype') is# 'quickfix'"))
-		Errors
-	else
-		lclose
-	endif
-endfunction
-
-function! ToggleRelativeNumber()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunction
-
-autocmd BufWritePost * call CheckSyntasticErrors()
-autocmd BufWinLeave * lclose
-
-nmap <F5> :GundoToggle<CR>
-nmap <F8> :TagbarToggle<CR>
-
-nmap <F9> :SCCompile<CR>
-nmap <F10> :SCCompileRun<CR>
-
 nmap gct :exec "!ctags -R ."<CR>
 
 nmap r<LEFT> :<C-U>exec "vertical resize -".v:count1<CR>
 nmap r<DOWN> :<C-U>exec "resize -".v:count1<CR>
 nmap r<UP> :<C-U>exec "resize +".v:count1<CR>
 nmap r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
-
-nmap <C-e> :call ToggleSyntasticErrors()<CR>
-
-nmap <C-n> :call ToggleRelativeNumber()<CR>
 
 nmap th :tabmove -1<CR>
 nmap tl :tabmove +1<CR>

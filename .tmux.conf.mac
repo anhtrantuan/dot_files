@@ -16,20 +16,6 @@ bind -r h select-pane -L
 bind -r j select-pane -D
 bind -r k select-pane -U
 bind -r l select-pane -R
-## Splitting panes
-bind -r | split-window -h -c "#{pane_current_path}"
-bind -r - split-window -v -c "#{pane_current_path}"
-## Copy and paste
-bind C-c run "tmux show-buffer | reattach-to-user-namespace pbcopy"
-## Layouts
-bind R source-file ~/.tmux/ruby
-
-# Default delay
-set -sg escape-time 1
-
-# Base indexes
-set -g base-index 1
-setw -g pane-base-index 1
 
 # Enable mouse mode
 ## Need to install SIMBL and MouseTerm
