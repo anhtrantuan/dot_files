@@ -118,9 +118,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-surround'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'kana/vim-textobj-user'
 Bundle 'avakhov/vim-yaml'
 
 colorscheme kolor
