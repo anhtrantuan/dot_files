@@ -27,18 +27,6 @@ else
   set backup		" keep a backup file
 endif
 
-set history=500		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set number		" show line numbers
-set showmatch		" show matching brackets
-set cindent
-set smartindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -102,6 +90,31 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+set history=1000		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
+set number		" show line numbers
+set showmatch		" show matching brackets
+set cindent
+set autoindent
+set copyindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartcase
+set undolevels=1000
+set title
+set visualbell
+set noerrorbells
+set relativenumber
+set nrformats=
+set foldcolumn=1
+set foldmethod=syntax
+set nofoldenable
+set laststatus=2
+set pastetoggle=<F2>
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -148,17 +161,5 @@ highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
 
 runtime macros/matchit.vim
-
-set nrformats=
-
-set smartcase
-
-set relativenumber
-
-set foldcolumn=1
-set foldmethod=syntax
-set nofoldenable
-
-set laststatus=2
 
 set rtp+=$GOROOT/misc/vim
