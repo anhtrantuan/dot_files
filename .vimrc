@@ -122,10 +122,6 @@ Bundle 'avakhov/vim-yaml'
 
 colorscheme kolor
 
-let g:NERDTreeShowLineNumbers=1
-
-let g:Powerline_symbols='fancy'
-
 let g:kolor_italic=1
 let g:kolor_bold=1
 let g:kolor_underlined=0
