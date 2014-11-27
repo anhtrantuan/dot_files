@@ -120,6 +120,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'flazz/vim-colorschemes'
