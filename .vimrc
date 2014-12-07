@@ -141,12 +141,22 @@ let g:kolor_underlined=0
 let g:kolor_alternative_matchparen=0
 let g:rspec_command='!bundle exec spring rspec {spec}'
 
+function! ToggleRelativeNumber()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+
 nmap gct :exec "!ctags -R ."<CR>
 
 nmap r<LEFT> :<C-U>exec "vertical resize -".v:count1<CR>
 nmap r<DOWN> :<C-U>exec "resize -".v:count1<CR>
 nmap r<UP> :<C-U>exec "resize +".v:count1<CR>
 nmap r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
+
+nmap <C-n> :call ToggleRelativeNumber()<CR>
 
 nmap th :tabmove -1<CR>
 nmap tl :tabmove +1<CR>
