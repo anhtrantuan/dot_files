@@ -116,7 +116,7 @@ set laststatus=2
 set pastetoggle=<F2>
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 Bundle 'gmarik/vundle'
 
@@ -132,6 +132,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-surround'
 Bundle 'avakhov/vim-yaml'
+
+call vundle#end()
 
 colorscheme kolor
 
