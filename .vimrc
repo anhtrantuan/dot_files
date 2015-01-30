@@ -141,7 +141,6 @@ let g:kolor_italic=1
 let g:kolor_bold=1
 let g:kolor_underlined=0
 let g:kolor_alternative_matchparen=0
-let g:rspec_command='!bundle exec spring rspec {spec}'
 
 function! ToggleRelativeNumber()
   if(&relativenumber == 1)
