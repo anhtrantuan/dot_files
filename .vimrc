@@ -159,8 +159,8 @@ nmap r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
 
 nmap <C-n> :call ToggleRelativeNumber()<CR>
 
-nmap th :tabmove -1<CR>
-nmap tl :tabmove +1<CR>
+nmap th :exec 'tabmove ' . (tabpagenr() - 2)<CR>
+nmap tl :exec 'tabmove ' . tabpagenr()<CR>
 
 nmap Tt :call RunCurrentSpecFile()<CR>
 nmap Ts :call RunNearestSpec()<CR>
