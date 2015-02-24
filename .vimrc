@@ -122,6 +122,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'jimmyhchan/dustjs.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'junegunn/vim-easy-align'
