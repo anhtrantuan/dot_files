@@ -6,6 +6,8 @@
 [user]
   name  = anhtrantuan
   email = anhtrantuan.hcmc@gmail.com
+[push]
+  default = simple
 [web]
   browser = google-chrome
 [alias]
