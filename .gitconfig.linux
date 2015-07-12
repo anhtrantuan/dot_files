@@ -22,4 +22,5 @@
   pp = push -f production HEAD:master
   ps = push -f staging HEAD:master
   pu = pull
+  pua = pull --all
   ss = status
