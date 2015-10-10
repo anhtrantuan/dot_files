@@ -12,6 +12,7 @@ bind -r h select-pane -L
 bind -r j select-pane -D
 bind -r k select-pane -U
 bind -r l select-pane -R
+bind -t vi-copy Enter copy-pipe "xclip -sel clip -i"
 
 # Enable mouse mode
 setw -g mode-mouse on
