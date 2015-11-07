@@ -110,7 +110,7 @@ set noerrorbells
 set relativenumber
 set nrformats=
 set foldcolumn=1
-set foldmethod=syntax
+" set foldmethod=syntax
 set nofoldenable
 set laststatus=2
 set pastetoggle=<F2>
