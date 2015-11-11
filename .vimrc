@@ -166,6 +166,7 @@ nmap <C-n> :call ToggleRelativeNumber()<CR>
 nmap th :exec "tabmove " . (tabpagenr() - 2)<CR>
 nmap tl :exec "tabmove " . tabpagenr()<CR>
 
+nmap Tc <Plug>SetTmuxVars
 nmap Tt :TestNearest<CR>
 nmap TT :TestFile<CR>
 nmap Ta :TestSuite<CR>
