@@ -118,21 +118,22 @@ set pastetoggle=<F2>
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Bundle "gmarik/vundle"
 
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'jimmyhchan/dustjs.vim'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-surround'
-Bundle 'avakhov/vim-yaml'
+Bundle "mileszs/ack.vim"
+Bundle "kien/ctrlp.vim"
+Bundle "jimmyhchan/dustjs.vim"
+Bundle "tomtom/tcomment_vim"
+Bundle "jgdavey/tslime.vim"
+Bundle "flazz/vim-colorschemes"
+Bundle "junegunn/vim-easy-align"
+Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-haml"
+Bundle "plasticboy/vim-markdown"
+Bundle "tpope/vim-rails"
+Bundle "tpope/vim-surround"
+Bundle "janko-m/vim-test"
+Bundle "avakhov/vim-yaml"
 
 call vundle#end()
 
@@ -142,6 +143,8 @@ let g:kolor_italic=1
 let g:kolor_bold=1
 let g:kolor_underlined=0
 let g:kolor_alternative_matchparen=0
+
+let test#strategy = "tslime"
 
 function! ToggleRelativeNumber()
   if(&relativenumber == 1)
@@ -160,13 +163,14 @@ nmap r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
 
 nmap <C-n> :call ToggleRelativeNumber()<CR>
 
-nmap th :exec 'tabmove ' . (tabpagenr() - 2)<CR>
-nmap tl :exec 'tabmove ' . tabpagenr()<CR>
+nmap th :exec "tabmove " . (tabpagenr() - 2)<CR>
+nmap tl :exec "tabmove " . tabpagenr()<CR>
 
-nmap Tt :call RunCurrentSpecFile()<CR>
-nmap Ts :call RunNearestSpec()<CR>
-nmap Tl :call RunLastSpec()<CR>
-nmap Ta :call RunAllSpecs()<CR>
+nmap Tt :TestNearest<CR>
+nmap TT :TestFile<CR>
+nmap Ta :TestSuite<CR>
+nmap Tl :TestLast<CR>
+nmap Tg :TestVisit<CR>
 
 vmap <Enter> <Plug>(EasyAlign)
 nmap =a <Plug>(EasyAlign)
