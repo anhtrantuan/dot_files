@@ -130,6 +130,7 @@ Bundle "junegunn/vim-easy-align"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-haml"
 Bundle "plasticboy/vim-markdown"
+Bundle "JamshedVesuna/vim-markdown-preview"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-surround"
 Bundle "janko-m/vim-test"
@@ -145,6 +146,8 @@ let g:kolor_underlined=0
 let g:kolor_alternative_matchparen=0
 
 let test#strategy = "tslime"
+
+let vim_markdown_preview_hotkey="<C-m>"
 
 function! ToggleRelativeNumber()
   if(&relativenumber == 1)
