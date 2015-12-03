@@ -15,6 +15,7 @@
   ap = add -p
   co = checkout
   cm = commit
+  cms = commit --signoff
   cp = cherry-pick
   cs = commit -s
   p  = push
