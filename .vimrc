@@ -167,7 +167,7 @@ nmap r<RIGHT> :<C-U>exec "vertical resize +".v:count1<CR>
 nmap <C-n> :call ToggleRelativeNumber()<CR>
 
 nmap th :exec "tabmove " . (tabpagenr() - 2)<CR>
-nmap tl :exec "tabmove " . tabpagenr()<CR>
+nmap tl :exec "tabmove " . (tabpagenr() + 1)<CR>
 
 nmap Tc <Plug>SetTmuxVars
 nmap Tt :TestNearest<CR>
