@@ -115,26 +115,25 @@ set nofoldenable
 set laststatus=2
 set pastetoggle=<F2>
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-Bundle "gmarik/vundle"
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle "mileszs/ack.vim"
-Bundle "kien/ctrlp.vim"
-Bundle "jimmyhchan/dustjs.vim"
-Bundle "tomtom/tcomment_vim"
-Bundle "jgdavey/tslime.vim"
-Bundle "flazz/vim-colorschemes"
-Bundle "junegunn/vim-easy-align"
-Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-haml"
-Bundle "plasticboy/vim-markdown"
-Bundle "JamshedVesuna/vim-markdown-preview"
-Bundle "tpope/vim-rails"
-Bundle "tpope/vim-surround"
-Bundle "janko-m/vim-test"
-Bundle "avakhov/vim-yaml"
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'janko-m/vim-test'
+Plugin 'stephpy/vim-yaml'
 
 call vundle#end()
 
