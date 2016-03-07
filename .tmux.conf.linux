@@ -15,7 +15,10 @@ bind -r l select-pane -R
 bind -t vi-copy Enter copy-pipe "xclip -sel clip -i"
 
 # Enable mouse mode
-set -g mouse on
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
 
 # VIm mode
 setw -g mode-keys vi
