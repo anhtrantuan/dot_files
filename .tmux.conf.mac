@@ -26,3 +26,6 @@ set -g mouse on
 
 # VIm mode
 setw -g mode-keys vi
+
+# History
+set-option -g history-limit 5000
