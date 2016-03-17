@@ -146,6 +146,7 @@ let g:kolor_alternative_matchparen=0
 
 let test#strategy = "tslime"
 
+let vim_markdown_preview_browser="Google Chrome"
 let vim_markdown_preview_hotkey="<C-m>"
 
 function! ToggleRelativeNumber()
