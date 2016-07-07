@@ -76,6 +76,8 @@ if has("autocmd")
     \ endif
 
   augroup END
+
+  autocmd BufNewFile,BufRead *.slim set ft=slim
 else
 
   set autoindent		" always set autoindenting on
@@ -131,6 +133,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-rails'
+Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-surround'
 Plugin 'janko-m/vim-test'
 Plugin 'stephpy/vim-yaml'
