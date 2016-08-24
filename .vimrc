@@ -131,8 +131,6 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-surround'
 Plugin 'janko-m/vim-test'
@@ -149,7 +147,7 @@ let g:kolor_alternative_matchparen=0
 
 let test#strategy = "tslime"
 
-let vim_markdown_preview_browser="Google Chrome"
+let vim_markdown_preview_browser="Firefox"
 let vim_markdown_preview_hotkey="<C-m>"
 
 function! ToggleRelativeNumber()
