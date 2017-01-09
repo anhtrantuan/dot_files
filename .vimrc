@@ -140,15 +140,20 @@ call vundle#end()
 
 colorscheme kolor
 
-let g:kolor_italic=1
-let g:kolor_bold=1
-let g:kolor_underlined=0
-let g:kolor_alternative_matchparen=0
+let g:kolor_italic                 = 1
+let g:kolor_bold                   = 1
+let g:kolor_underlined             = 0
+let g:kolor_alternative_matchparen = 0
 
 let test#strategy = "tslime"
 
-let vim_markdown_preview_browser="Firefox"
-let vim_markdown_preview_hotkey="<C-m>"
+let vim_markdown_preview_browser = "Firefox"
+let vim_markdown_preview_hotkey  = "<C-m>"
+
+let g:ctrp_cache_dir = $HOME . '/.cache/ctrp'
+if executable('ag')
+  let g:ctrp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 function! ToggleRelativeNumber()
   if(&relativenumber == 1)
