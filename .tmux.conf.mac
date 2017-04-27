@@ -17,8 +17,8 @@ bind -r j select-pane -D
 bind -r k select-pane -U
 bind -r l select-pane -R
 ## Clipboard copying
-unbind -t vi-copy Enter
-bind -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+unbind -T copy-mode-vi Enter
+bind -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
 
 # Enable mouse mode
 ## Need to install SIMBL and MouseTerm
