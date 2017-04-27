@@ -77,8 +77,8 @@ if has("autocmd")
 
   augroup END
 
-  autocmd BufNewFile,BufRead *.slim set syntax=slim
-  autocmd BufNewFile,BufRead *.thor set syntax=ruby
+  autocmd BufNewFile,BufRead *.slim set ft=slim
+  autocmd BufNewFile,BufRead *.thor set ft=ruby
 else
 
   set autoindent		" always set autoindenting on
