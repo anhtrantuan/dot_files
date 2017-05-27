@@ -79,6 +79,7 @@ if has("autocmd")
 
   autocmd BufNewFile,BufRead *.slim set ft=slim
   autocmd BufNewFile,BufRead *.thor set ft=ruby
+  autocmd BufNewFile,BufRead *.jbuilder set ft=ruby
 else
 
   set autoindent		" always set autoindenting on
