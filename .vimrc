@@ -76,10 +76,6 @@ if has("autocmd")
     \ endif
 
   augroup END
-
-  autocmd BufNewFile,BufRead *.slim set ft=slim
-  autocmd BufNewFile,BufRead *.thor set ft=ruby
-  autocmd BufNewFile,BufRead *.jbuilder set ft=ruby
 else
 
   set autoindent		" always set autoindenting on
@@ -93,6 +89,9 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+set nocompatible
+filetype off
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -140,6 +139,12 @@ Plugin 'janko-m/vim-test'
 Plugin 'stephpy/vim-yaml'
 
 call vundle#end()
+
+syntax enable
+filetype plugin indent on
+
+autocmd BufNewFile,BufRead *.thor set ft=ruby
+autocmd BufNewFile,BufRead *.jbuilder set ft=ruby
 
 colorscheme kolor
 
