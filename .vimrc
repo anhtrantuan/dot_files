@@ -118,13 +118,15 @@ set nofoldenable
 set laststatus=2
 set pastetoggle=<F2>
 
+set rtp+=/usr/local/opt/fzf
+
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -157,6 +159,8 @@ let test#strategy = "tslime"
 
 let vim_markdown_preview_browser = "Firefox"
 let vim_markdown_preview_hotkey  = "<C-m>"
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 let g:ctrp_cache_dir = $HOME . '/.cache/ctrp'
 if executable('ag')
@@ -192,6 +196,8 @@ nmap Tg :TestVisit<CR>
 
 vmap <Enter> <Plug>(EasyAlign)
 nmap =a <Plug>(EasyAlign)
+
+nmap <C-p> :Files<CR>
 
 highlight Normal ctermbg=NONE
 highlight NonText ctermbg=NONE
