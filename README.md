@@ -1,6 +1,8 @@
 # Installation
 * Clone this repository into your home folder: `git clone git@github.com:anhtrantuan/dot_files.git`
+* Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 * Make symbolic (soft) link to .vimrc: `ln -s ~/dot_files/.vimrc ~/.vimrc` 
+* Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * Make symbolic link to .tmux.conf:
   * For Mac: `ln -s ~/dot_files/.tmux.conf.mac ~/.tmux.conf`
   * For Linux: `ln -s ~/dot_files/.tmux.conf.linux ~/.tmux.conf`
