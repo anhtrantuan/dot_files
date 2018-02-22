@@ -4,7 +4,7 @@
   excludesfile = /Users/anhtran/.gitignore_global
   editor       = vim
 [user]
-  name  = anhtrantuan
+	name = Anh Tran
   email = anhtrantuan.hcmc@gmail.com
 [push]
   default = simple
@@ -26,3 +26,8 @@
   pua = pull --all
   ri  = rebase -i
   ss  = status
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
