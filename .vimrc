@@ -139,6 +139,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-surround'
 Plugin 'janko-m/vim-test'
+Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'stephpy/vim-yaml'
 
 call vundle#end()
