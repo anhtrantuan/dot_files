@@ -189,6 +189,7 @@ nmap <C-n> :call ToggleRelativeNumber()<CR>
 nmap th :exec "tabmove " . (tabpagenr() - 2)<CR>
 nmap tl :exec "tabmove " . (tabpagenr() + 1)<CR>
 
+let test#ruby#rspec#executable = 'bundle exec rspec'
 nmap Tc <Plug>SetTmuxVars
 nmap Tt :TestNearest<CR>
 nmap TT :TestFile<CR>
