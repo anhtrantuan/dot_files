@@ -5,7 +5,7 @@
   editor       = vim
 [user]
 	name = Andy Tran
-  email = anhtrantuan.hcmc@gmail.com
+	email = anhtrantuan.hcmc@gmail.com
 [push]
   default = simple
 [alias]
