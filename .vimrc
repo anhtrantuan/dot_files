@@ -117,6 +117,7 @@ set foldcolumn=1
 set nofoldenable
 set laststatus=2
 set pastetoggle=<F2>
+set colorcolumn=80
 
 set rtp+=/usr/local/opt/fzf
 
