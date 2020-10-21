@@ -129,7 +129,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'jgdavey/tslime.vim'
+Plugin 'git@github.com:jgdavey/tslime.vim.git'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/vim-easy-align'
@@ -169,6 +169,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:ctrp_cache_dir = $HOME . '/.cache/ctrp'
 if executable('ag')
   let g:ctrp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ackprg = 'ag --vimgrep'
 endif
 
 function! ToggleRelativeNumber()
