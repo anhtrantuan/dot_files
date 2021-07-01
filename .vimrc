@@ -164,7 +164,7 @@ let test#strategy = "tslime"
 let vim_markdown_preview_browser = "Firefox"
 let vim_markdown_preview_hotkey  = "<C-m>"
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -u -p ~/.gitignore_global -g ""'
 
 let g:ctrp_cache_dir = $HOME . '/.cache/ctrp'
 if executable('ag')
